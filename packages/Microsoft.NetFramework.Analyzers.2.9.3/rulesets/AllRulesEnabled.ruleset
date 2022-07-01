@@ -1,0 +1,32 @@
+footer_submenu', $data)) {
+                    $message = "<div class='alert alert-success text-center fade in' id='flash_succ_message'>footer menu created successfully.</div>";
+
+                }
+                $this->session->set_flashdata('message', $message);
+                redirect(base_url() . 'admin/footer_submenu');
+            }
+        }
+        $this->load->vars($this->data);
+        $this->load->view($this->data['theme'] . '/template');
+    }
+
+    public function edit($id)
+    {
+        $this->data['page'] = 'edit';
+        $this->data['datalist'] = $this->admin_panel_model->edit_submenu($id);
+        if ($this->data['admin_id'] > 1) {
+            $this->session->set_flashdata('message', '<p class="alert alert-danger">Permission Denied</p>');
+            redirect(base_url() . 'admin/footer_submenu');
+
+        } else {
+            if ($this->input->post('form_submit')) {
+                $data['footer_menu'] = $this->input->post('main_menu');
+                $value = $this->input->post('sub_menu');
+                $data['footer_submenu'] = str_replace(' ', '_', $value);
+                $data['page_desc'] = $this->input->post('page_desc');
+                $data['status'] = $this->input->post('status');
+                $this->db->where('id', $id);
+                if ($this->db->update('footer_submenu', $data)) {
+                    $message = "<div class='alert alert-success text-center fade in' id='flash_succ_message'>footer menu edited successfully.</div>";
+
+             

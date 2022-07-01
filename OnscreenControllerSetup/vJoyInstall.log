@@ -1,0 +1,53 @@
++++++++ +++++++ +++++++ +++++++ +++++++ +++++++ +++++++ +++++++ +++++++ +++++++ 
++++++++ +++++++ Sat Mar 27 05:35:15 2021
++++++++ +++++++ OS: 10.0   (x64)
+>> main: DeviceHWID --> root\VID_1234&PID_BEAD&REV_0219 ; InfFile --> vJoy.inf
+[I]  FindInstalled: Searching for HWID root\VID_1234&PID_BEAD&REV_0219
+[I]  FindInstalled: Searching for HWID root\VID_1234&PID_BEAD
+[I]  Install: GetFullPathName --> D:\Zamula\OnscreenController_New\OnscreenControllerSetup\vJoy.inf 
+[I]  Install: hwIdList --> root\VID_1234&PID_BEAD&REV_0219
+[I]  Install: SetupDiGetINFClass --> Class Name HIDClass
+[I]  Install: SetupDiCreateDeviceInfoList OK
+[I]  Install: SetupDiCreateDeviceInfo  OK
+[I]  Install: SetupDiSetDeviceRegistryProperty  OK
+[I]  Install: SetupDiCallClassInstaller  OK
+[I]  Install: Starting cmdUpdate
+[I]  cmdUpdate: GetFullPathName --> D:\Zamula\OnscreenController_New\OnscreenControllerSetup\vJoy.inf 
+[I]  cmdUpdate: Install: Starting cmdUpdate
+[I]  cmdUpdate:  File newdev.dll loaded OK
+[I]  cmdUpdate:  UPDATEDRIVERFORPLUGANDPLAYDEVICES got OK
+[I]  cmdUpdate:  CMP_WaitNoPendingInstallEvents returned WAIT_OBJECT_0
+[I]  cmdUpdate:  UPDATEDRIVERFORPLUGANDPLAYDEVICES(hwid=root\VID_1234&PID_BEAD&REV_0219, InfPath=D:\Zamula\OnscreenController_New\OnscreenControllerSetup\vJoy.inf) executed OK
+[I]  cmdUpdate returns code 0
+[I]  Install: Finished cmdUpdate
+[I]  Install: SetupDiGetDeviceInstanceId (Device Instance Path=ROOT\HIDCLASS\0000) OK
+[I]  Install() OK - No need to reboot
+[I]  GetParentDevInst: ParentDeviceNode = ROOT\HIDCLASS\0000 , CompatibleId = hid_device_system_game
+[I]  GetParentDevInst: Function CM_Locate_DevNode OK
+[I]  AssignCompatibleId: Function CM_Get_Child OK
+[I]  AssignCompatibleId: Function CM_Get_Device_ID_Size OK
+[I]  AssignCompatibleId: Function CM_Get_Device_ID (Device Instance Path = HID\HIDCLASS\1&2D595CA7&9&0000) OK
+[I]  AssignCompatibleId: Function CM_Reenumerate_DevNode[1] OK
+[I]  AssignCompatibleId: Function CM_Locate_DevNode (Device Instance Path = HID\HIDCLASS\1&2D595CA7&9&0000) OK
+[I]  AssignCompatibleId: Function SetupDiCreateDeviceInfoList OK
+[I]  AssignCompatibleId: Function SetupDiOpenDeviceInfo OK
+[W]  SetupDiSetDeviceRegistryProperty failed with error: Unknown Error: e0000209
+[I]  AssignCompatibleId was OK
+[I]  AssignCompatibleId: Function CM_Get_Sibling OK
+[I]  AssignCompatibleId: Function CM_Get_Device_ID_Size OK
+[I]  AssignCompatibleId: Function CM_Get_Device_ID (Device Instance Path = {D6E55CA0-1A2E-4234-AAF3-3852170B492F}\VJOYRAWPDO\1&2D595CA7&9&VJOYINSTANCE00) OK
+[I]  AssignCompatibleId: Device {D6E55CA0-1A2E-4234-AAF3-3852170B492F}\VJOYRAWPDO\1&2D595CA7&9&VJOYINSTANCE00 is not a joystick device - skip
+[E]  AssignCompatibleId: Function CM_Get_Sibling failed with error: 0000000D
+[I]  installation(): InputInfFullPath --> C:\WINDOWS\Inf\Input.inf
+[I]  cmdUpdateNI: GetFullPathName --> C:\WINDOWS\Inf\Input.inf
+[I]  cmdUpdateNI: SetNIFn(TRUE) returned 0
+[I]  cmdUpdateNI: Calling cmdUpdate with InfPath=C:\WINDOWS\Inf\Input.inf
+[I]  cmdUpdate: GetFullPathName --> C:\WINDOWS\Inf\Input.inf 
+[I]  cmdUpdate: Install: Starting cmdUpdate
+[I]  cmdUpdate:  File newdev.dll loaded OK
+[I]  cmdUpdate:  UPDATEDRIVERFORPLUGANDPLAYDEVICES got OK
+[I]  cmdUpdate:  CMP_WaitNoPendingInstallEvents returned WAIT_OBJECT_0
+[I]  cmdUpdate:  UPDATEDRIVERFORPLUGANDPLAYDEVICES(hwid=hid_device_system_game, InfPath=C:\WINDOWS\Inf\Input.inf) executed OK
+[I]  cmdUpdate returns code 0
+[I]  cmdUpdateNI: cmdUpdate returned 0
+[I]  cmdUpdateNI returns value 0

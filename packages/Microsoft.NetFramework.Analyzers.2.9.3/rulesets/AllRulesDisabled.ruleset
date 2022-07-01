@@ -1,0 +1,29 @@
+<?php
+
+class Footer_submenu extends CI_Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
+        error_reporting(0);
+        $this->data['theme'] = 'admin';
+        $this->data['module'] = 'footer_submenu';
+        $this->load->model('admin_panel_model');
+        $this->data['admin_id'] = $this->session->userdata('id');
+        $this->user_role = !empty($this->session->userdata('user_role')) ? $this->session->userdata('user_role') : 0;
+        $this->data['main_menu'] = $this->admin_panel_model->get_all_footer_menu();
+        $this->load->helper('ckeditor');
+        // Array with the settings for this instance of CKEditor (you can have more than one)
+        $this->data['ckeditor_editor1'] = array
+        (
+            //id of the textarea being replaced by CKEditor
+            'id' => 'ck_editor_textarea_id',
+            // CKEditor path from the folder on the root folder of CodeIgniter
+            'path' => 'assets/js/ckeditor',
+            // optional settings
+            'config' => array
+            (
+                'toolbar' => "Full",
+                'filebrowserBrowseUrl' => base_url() . 'assets/js/ckfinder/ckfinder.html',
+                'filebrowserImageBrowseUrl' => base_url() . 'assets/js/ckfinder/ckfinder.html?Type=Images',
+                'filebrowserFlashBrowseUrl' => base_url() . 'assets/js/ckfinder/ckfinder.html?Type=Fl
